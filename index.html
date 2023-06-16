@@ -13,6 +13,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>Matlab Code</title>
+    <!-- highlight js Css -->
+    <link rel="stylesheet" href="./highlight/styles/default.min.css" />
   </head>
   <body>
     <header>
@@ -84,14 +86,15 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   z = 5 + 12*i; w = 3 + 4*i;
   % Real part of z
   real(z)
                 
   % Imaginary part of z
   imag(z)
-                </pre
-              >
+                </code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -104,6 +107,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Define the complex numbers
   z1 = 2 + 3i;
   z2 = 4 - 2i;
@@ -119,8 +123,8 @@
   title('Plot of Complex Numbers');
   % Activate the gird
   grid on
-                </pre
-              >
+                </code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -140,6 +144,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Define the x values for the function
   x = linspace(0, 4*pi, 100);
   % x takes only 100 values
@@ -157,8 +162,8 @@
   % \geq stands for greater than equal to
   title('Graph of y = cos x, 0 \leq x \leq 4\ pi');
   grid on
-                </pre
-              >
+                  </code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -173,6 +178,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Define the x values for the functions
   x = linspace (0, 4*pi, 100);
   % x takes only 100 values
@@ -195,8 +201,8 @@
   % Add a legend
   legend('y = cos x', 'y = sin x');
   grid on
-                </pre
-              >
+                </code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -212,6 +218,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
 
   % Define theta
   t = 0: 2*pi/100: 2*pi;
@@ -220,8 +227,8 @@
   
   r = 1-sin(t);
   polar(t,r)
-                </pre
-              >
+                </code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -234,6 +241,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Define theta
   t = 0: pi/50: 10*pi;
   % pi/50 represents difference between two consecutive values of theta
@@ -245,8 +253,8 @@
   
   % plot 3D
   plot3(x,y,z)
-                </pre
-              >
+                </code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -267,6 +275,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Sequence of odd numbers and sum
   % Using for loop
   
@@ -281,8 +290,8 @@
       s = s + tn;
   end
   sum = s
-                </pre
-              >
+                  </code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -292,6 +301,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Using vectorized way  
   % Define first 5 ns
   n = 1:5
@@ -300,8 +310,8 @@
   
   % Add up all terms of the sequence
   s = sum
-                </pre
-              >
+                  </code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -315,6 +325,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Find sixth term and sum to sixth term of arithmetic sequence  
   % Define sequence with first term = 3 and difference = 4
   % Take a large termination value of sequence, ex 999
@@ -325,8 +336,8 @@
   
   % Find the sum of the first 6 elements
   s1_6 = sum(seq(1:6))
-                </pre
-              >
+                </code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -339,8 +350,7 @@
           </h3>
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
-              <pre id="code">
-
+              <pre id="code"><code>
   % Find the seventh term and sum to seventh term of geometric sequence  
   % Define sequence with first term = 3 and difference = 4
   a = 5; r = 2;
@@ -354,8 +364,7 @@
   
   % Find the sum
   s1_7 = sum(L(1:7))
-                </pre
-              >
+</code></pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -368,6 +377,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Sum of infinite Geometric series  
   % Define first ten terms
   format long
@@ -378,8 +388,8 @@
   
   % Find the sum
   s_to_i = sum(s)
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -397,6 +407,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Construction of a matrix of a data
   A = [1 2 3; 4 5 6; 7 8 9]
   % Determine the size of the matrix
@@ -412,8 +423,8 @@
   % Construction of diagonal matrix with given diagonal elements
   C = [12 24 48 96]
   D = diag(C)
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -425,6 +436,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Construction of matrix of order with same entries
   M = ones(2, 3)
   N = zeros(2, 3)
@@ -446,8 +458,8 @@
   Determinant = det (A)
   Inverse = inv (A)
   Rank = rank (A)
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -465,7 +477,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
-
+<code>
   % Draw a ellipse
   % horixontal and vertical radius
   
@@ -477,9 +489,8 @@
   x = x0 + a*cos (t);
   y = y0 + b*sin (t);
   plot (x,y)
-                
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -492,10 +503,11 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Draw a circle using ezplot
   ezplot('x^2 + y^2 - 25'), [-6 6 -6 -6]
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -510,10 +522,11 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Draw a Hyperbola using ezplot
   ezplot('(x^2)/16 - (y^2)/9 -1'),[-6 6 -6 6];
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -527,6 +540,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % Define two vector
   u = [1 0];
   v = [2 2];
@@ -535,8 +549,8 @@
   a = u*v'
   b = norm(u,2)*norm(v,2)*cos(pi/4)
   c = dot(u,v)
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -557,6 +571,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % enter given vector
   a = [2 1 -2]; b = [5 -2 1]; c = [3 2 1];
   
@@ -576,8 +591,8 @@
   %scalar and Vector triple product
   ScalarTripleProduct = dot(a,cross(b,c))
   VectorTripleProduct = cross(a,cross(b,c))
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -593,11 +608,12 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
   % find factorial using fucntion
   n = 9;
   nFactorial = factorial(n)
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -611,6 +627,7 @@
           <div class="card mx-auto my-5">
             <div class="card-body code-container">
               <pre id="code">
+                <code>
    % Finding Permutation and combination  
    % Ask user of input
    n = input('Total number of objects');
@@ -626,8 +643,8 @@
   %compute and display combination
   str2 = [num2str(p/factorial(r)) ' Combinations'];
   disp(str2)
-                </pre
-              >
+</code>
+                </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
           </div>
@@ -640,5 +657,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
+
+    <!-- highlight js -->
+    <script src="./highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>

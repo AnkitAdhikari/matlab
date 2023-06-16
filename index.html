@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Matlab Code</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Matlab</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#src"
+                  >Set,Real & Complex</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#rfg"
+                  >Relation, Function & Graph</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#ss"
+                  >Sequences & series</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#md">Mat & Det</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#ag"
+                  >Geometry & vector</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#pc"
+                  >Permu & Combi</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="text-center my-5">Matlab - Ankit Adhikari</h1>
+
+      <!-- set theory, real and complex numbers -->
+      <section id="src" class="py-5 mb-5">
+        <h2 class="text-center my-2">
+          1 - Set Theory, Real and Complex Number
+        </h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            If z = 5 + 12i, w = 3 + 4i, create a script file to evalute the
+            following
+          </h3>
+          <ul class="ms-5">
+            <li>Re(z), Im(z)</li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  z = 5 + 12*i; w = 3 + 4*i;
+  % Real part of z
+  real(z)
+                
+  % Imaginary part of z
+  imag(z)
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">Plot the following complex Numbers</h3>
+          <ul class="ms-5">
+            <li>2 + 3i, 4 - 2i, -1 + 2i</li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Define the complex numbers
+  z1 = 2 + 3i;
+  z2 = 4 - 2i;
+  z3 = -1 + 2i;
+  % Enter each coordinate: plot(x1,y1,'bo',x2,y2,'bo')
+  % bo represents blue circle
+  plot(2,3,'bo',4,-2,'bo',-1,2,'bo')
+  % Define limit of axes
+  axis ([-2 5 -3 4])
+  % Add some labels
+  xlabel('Real');
+  ylabel('Imaginary');
+  title('Plot of Complex Numbers');
+  % Activate the gird
+  grid on
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Relation function and graph -->
+      <section class="py-5 mb-5" id="rfg">
+        <h2 class="text-center my-2">2 - Relation, Function and Graph</h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file for the graph of the following function
+          </h3>
+          <ul class="ms-5">
+            <li>y = cos x, 0 &le; x &le; &#120587;</li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Define the x values for the function
+  x = linspace(0, 4*pi, 100);
+  % x takes only 100 values
+  
+  % Evaluate the y values for the function
+  y = cos (x) ;
+  
+  % Plot the function
+  plot(x, y, 'ro');
+  
+  % Set the axis labels and title
+  xlabel('x');
+  ylabel('y = cos x');
+  % \leq stands for less than equal to and
+  % \geq stands for greater than equal to
+  title('Graph of y = cos x, 0 \leq x \leq 4\ pi');
+  grid on
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file for the graph of the following function
+          </h3>
+          <ul class="ms-5">
+            <li>y1 = cos x, y2 = sin x, 0 &le; x &le; &#120587;</li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Define the x values for the functions
+  x = linspace (0, 4*pi, 100);
+  % x takes only 100 values
+  
+  % Evaluate the y values for the functions
+  y1 = cos(x);
+  y2 = sin(x);
+  
+  % Plot the functions
+  plot(x, y1, 'b-', x, y2, 'r--');
+  
+  % set the axis label and title
+  xlabel('x');
+  ylabel('y');
+  
+  % \leq stands for less than equal to and
+  % \geq stands for greater than equal to
+  title('Graph of y = cos x (blue) and y = sin x (red), 0 \leq x \leq 2\ pi');
+  
+  % Add a legend
+  legend('y = cos x', 'y = sin x');
+  grid on
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file for the graph of <em>cardioid</em>, of the
+            following polar function
+          </h3>
+          <ul class="ms-5">
+            <li>r = 1 - sin (t), 0 &le; t &le; &#120587;</li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+
+  % Define theta
+  t = 0: 2*pi/100: 2*pi;
+  
+  % 2*pi/100 represents difference between two consecutive values of theta
+  
+  r = 1-sin(t);
+  polar(t,r)
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Use the command plot3(x,y,z) to plot the helix: if x(t) = sint, y(t)
+            = cost, z(t) = t for every t in t less than 10pi.
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Define theta
+  t = 0: pi/50: 10*pi;
+  % pi/50 represents difference between two consecutive values of theta
+  
+  % Define Funtions
+  x = sin(t);
+  y = cos(t);
+  z = t;
+  
+  % plot 3D
+  plot3(x,y,z)
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sequence and series -->
+      <section id="ss" class="stc py-5 mb-5">
+        <h2 class="text-center my-2">3 - Sequence and series</h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file of codes to generate a sequence of odd numbers
+            and then find the sum:
+          </h3>
+          <ul class="ms-5">
+            <li>Using a for-loop in sequence</li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Sequence of odd numbers and sum
+  % Using for loop
+  
+  % Initial sum
+  s = 0;
+  
+  % Find the first five terms
+  for n = 1:5
+      tn = 2*n - 1
+  
+      % Add up to find the sum
+      s = s + tn;
+  end
+  sum = s
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+          <ul class="ms-5">
+            <li>Using Vectorized way</li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Using vectorized way  
+  % Define first 5 ns
+  n = 1:5
+  
+  tn = 2*n - 1
+  
+  % Add up all terms of the sequence
+  s = sum
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file to find the sixth term and the sum of the first
+            six terms of the arithmetic sequence 3,7,15, ... where a = 3 and d =
+            4
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Find sixth term and sum to sixth term of arithmetic sequence  
+  % Define sequence with first term = 3 and difference = 4
+  % Take a large termination value of sequence, ex 999
+  seq = 3: 4: 999;
+  
+  % Find the sixth term
+  sn = seq(6)
+  
+  % Find the sum of the first 6 elements
+  s1_6 = sum(seq(1:6))
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file to find the seventh term and the sum of the
+            first seven terms of the geometic sequence 5,10,20, 40 ... where a =
+            5 and r = 2
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+
+  % Find the seventh term and sum to seventh term of geometric sequence  
+  % Define sequence with first term = 3 and difference = 4
+  a = 5; r = 2;
+  
+  % Define sequence
+  n = 1: 7;
+  L = a*r.^(n-1);
+  
+  % Find the seventh term
+  t7 = L(7)
+  
+  % Find the sum
+  s1_7 = sum(L(1:7))
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file to find the sum of infinity of an infinite
+            geometric series.
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Sum of infinite Geometric series  
+  % Define first ten terms
+  format long
+  n = 0: 10;
+  
+  % Define sequence
+  s = (-1).^n./2.^n
+  
+  % Find the sum
+  s_to_i = sum(s)
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Matrices and Determinants -->
+      <section id="md" class="stc py-5 mb-5">
+        <h2 class="text-center my-2">4 - Matrices and Determinants</h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file to construct a square matrix, its determinant
+            and diagonal matrix.
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Construction of a matrix of a data
+  A = [1 2 3; 4 5 6; 7 8 9]
+  % Determine the size of the matrix
+  S = size (A)
+  % Referencing the elements of a matrix
+  a23 = A(2, 3)
+  % All the elements of mth columns A(:,m)
+  C3 = A(:, 3)
+  % construction of matrix of order with same entries
+  B = ones(3,2)
+  % Find determinant of matrix
+  D = det (A)
+  % Construction of diagonal matrix with given diagonal elements
+  C = [12 24 48 96]
+  D = diag(C)
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file to evalute sum, product, rank of a matrix.
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Construction of matrix of order with same entries
+  M = ones(2, 3)
+  N = zeros(2, 3)
+  P = [M N]
+  % Define two square matrices of same oredr
+  A = [-1 2 3; 4 5 6; 7 8 -9]
+  B = [7 5 6; 2 7 8; 5 7 1]
+  % Matrix operations
+  sum = A + B
+  diff = A - B
+  b = 2;
+  C = A + b
+  D = A - b
+  E = A * b
+  F = A/b
+  % Transpose of a matrix
+  transpose = A'
+  prod = A * B
+  Determinant = det (A)
+  Inverse = inv (A)
+  Rank = rank (A)
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Analytical Geometry -->
+      <section id="ag" class="stc py-5 mb-5">
+        <h2 class="text-center my-2">
+          5 - Analytical Geomerty and Vectors in Spaces
+        </h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file of an ellipse with centre (x0,y0).
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+
+  % Draw a ellipse
+  % horixontal and vertical radius
+  
+  a =5;
+  b = 10;
+  x0 = 0;
+  y0 = 0;
+  t = -pi:0.01:pi;
+  x = x0 + a*cos (t);
+  y = y0 + b*sin (t);
+  plot (x,y)
+                
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file for the cirlce x<sup>2</sup> + y<sup>2</sup> =
+            25
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Draw a circle using ezplot
+  ezplot('x^2 + y^2 - 25'), [-6 6 -6 -6]
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file for the hyperbola x<sup>2</sup> / 16 - y<sup
+              >2</sup
+            >
+            / 9 = 1
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Draw a Hyperbola using ezplot
+  ezplot('(x^2)/16 - (y^2)/9 -1'),[-6 6 -6 6];
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file to evaluate the dot product
+            <strong>u.v</strong> if <strong>u</strong> =
+            <strong>[1 0] and <strong>v = [2,2]</strong></strong>
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % Define two vector
+  u = [1 0];
+  v = [2 2];
+  
+  %find dot product in 3 different ways
+  a = u*v'
+  b = norm(u,2)*norm(v,2)*cos(pi/4)
+  c = dot(u,v)
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file to evaluate the following vector operations for
+            the vectors
+          </h3>
+          <h6 class="ms-5">2i + j - 2k, b = 5i - 2j + k, c = 3i + 2j + k</h6>
+          <ul class="ms-5">
+            <li>a + b, a - b, a, unit(a)</li>
+            <li>a.b</li>
+            <li>a cross b</li>
+            <li>a.(b cross c)</li>
+            <li>a cross (b cross c)</li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % enter given vector
+  a = [2 1 -2]; b = [5 -2 1]; c = [3 2 1];
+  
+  % find sum, difference, magnitude and unit vector
+  Sum  = a+b
+  Diff = a-b
+  Magnitude = norm(a)
+  acap = a/norm(a)
+  MagnitudeOfUnitVector = norm(acap)
+  
+  %Dot product
+  DotProduct = dot(a,b)
+  
+  %Cross product
+  CrossProduct = cross(a,b)
+  
+  %scalar and Vector triple product
+  ScalarTripleProduct = dot(a,cross(b,c))
+  VectorTripleProduct = cross(a,cross(b,c))
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Permutation and Combination -->
+      <section id="pc" class="stc py-5">
+        <h2 class="text-center my-2">6 - Permutation and Combination</h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file to evalute factroial of positive integer n.
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+  % find factorial using fucntion
+  n = 9;
+  nFactorial = factorial(n)
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Create a script file to calculate the number of permutation and
+            combination of n objects taken r at a time. Take n = 10, r = 2 and
+            find both permutation (nPr) and combination (nCr)
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+   % Finding Permutation and combination  
+   % Ask user of input
+   n = input('Total number of objects');
+   r = input('Size of subgroup: ');
+  
+   %comput and display Permutation
+   p =1;
+   for i = n -r+1:n
+     p = p*i;
+   end
+  strl = [num2str(p) ' Permutationis'];
+  disp(strl)
+  %compute and display combination
+  str2 = [num2str(p/factorial(r)) ' Combinations'];
+  disp(str2)
+                </pre
+              >
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

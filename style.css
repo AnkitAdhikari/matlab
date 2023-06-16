@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+section {
+  background-color: rgb(233, 233, 233);
+}
+.card {
+  max-width: 75%;
+  position: relative;
+}
+.copy-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

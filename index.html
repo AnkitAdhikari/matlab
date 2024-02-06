@@ -10,6 +10,24 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <!-- mathjax delimiter configuration -->
+    <script>
+      MathJax = {
+        loader: { load: ["input/asciimath", "output/chtml"] },
+      };
+    </script>
+
+    <!-- mathjax polyfill-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- mathjax -->
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"
+    ></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>Matlab Code</title>
@@ -693,6 +711,56 @@ y = cos(x);
 plot (x,y,'g')
 xlabel('value of x')
 ylabel('value of y')
+                </code>
+                </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Limit -->
+      <section id="src" class="py-5 mb-5">
+        <h2 class="text-center my-2">2 - Limits</h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">`\lim_{x\to0} (7x^2 + 4x)/x`</h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+syms x
+f = (7*x^2+4*x)/x;
+limit(f,x,0)
+                </code>
+                </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">`\lim_{x\toy} (cosx - cosy)/(x-y)`</h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+syms x y
+f = (cos(x) - cos(y)) / (x-y);
+limit (f,x,y)
+                </code>
+                </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">`\lim_{x\toy} (sinx - siny)/(x-y)`</h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+syms x y
+f = (sin(x)-sin(y))/(x-y);
+limit (f,x,y)
                 </code>
                 </pre>
               <button class="copy-button btn btn-primary">Copy</button>

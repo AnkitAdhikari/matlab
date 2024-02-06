@@ -818,6 +818,72 @@ diff(y)
           </div>
         </div>
       </section>
+      <!-- Integration -->
+      <section id="src" class="py-5 mb-5">
+        <h2 class="text-center my-2">3 - Integration</h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">`\int x^4 dx`</h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+syms x
+y = x^4;
+int(y)
+                </code>
+              </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Simpson's 1/3 rule `\int_0^1 dx/(1+x^2), n = 4`
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+f = @(x) (1/(1+x^2));
+a = 0; b = 1; n = 4;
+h = (b-a)/n;
+s = f(b-a)/n;
+for i = 1: n -1
+    s = s + 4 * f(a+i*b);
+end
+for k = 2: 2: n -2;
+    s = s -2 *f(a+k*h);
+end
+I = (h/3)*s
+                </code>
+              </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Trapezodial Rule`\int_0^\pi sinx &nbsp; dx, n = 4`
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+f = @(x) sin(x);
+a = 0; b = pi; n = 4;
+h = (b-a)/n;
+s = 0.5*(f(a) + f(b));
+for i = 1:n-1
+    s = s+f(a+i*h);
+end
+I = h*s
+                </code>
+              </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

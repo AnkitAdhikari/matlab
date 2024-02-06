@@ -768,6 +768,56 @@ limit (f,x,y)
           </div>
         </div>
       </section>
+      <!-- Differentiation -->
+      <section id="src" class="py-5 mb-5">
+        <h2 class="text-center my-2">2 - Differentiation</h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">`d/dx(x^6)`</h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+syms x
+y = x^6;
+diff(y)
+                </code>
+              </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">`d/dx(x^2 tanx)`</h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+syms x
+y = x^2 * tan(x);
+diff(y)
+                </code>
+              </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="answer">
+          <h3 class="my-5 ms-5">`d/dx(log(3x-2))`</h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+syms x
+y = log (3*x-2);
+diff(y)
+                </code>
+              </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

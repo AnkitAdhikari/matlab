@@ -884,6 +884,102 @@ I = h*s
           </div>
         </div>
       </section>
+      <!-- Computational Method -->
+      <section id="src" class="py-5 mb-5">
+        <h2 class="text-center my-2">4 - Computational Method</h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">Simplex method</h3>
+          <ul class="ms-5">
+            <li>
+              Max f = `7x_1 + 5x_2` subject to&nbsp;&nbsp;&nbsp; `x_1 + 2x_2 \le
+              6`,&nbsp;&nbsp;&nbsp; `4x_1 + 3x_2 \le 6`,&nbsp;&nbsp;&nbsp;&nbsp;
+              `x_1 \ge 0,&nbsp;&nbsp;&nbsp; x_2 \ge 0.`
+            </li>
+            <li>
+              solve:
+              <ul>
+                <li>We write this as min f = `-7x_1 - 5x_2`</li>
+                <li>
+                  subject to `x_1 + 2x_2 \le 6`,&nbsp;&nbsp;&nbsp; `4x_1 + 3x_2
+                  \le 6`,&nbsp;&nbsp;&nbsp; `-x1 \le 0`,&nbsp;&nbsp;&nbsp; `-x_2
+                  \le 0`
+                </li>
+                <li>Then max f = -min f</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+                  % We solve this in MATLAB in the following way
+                  f = [-7;-5];
+                  b = [6;6;0;0];
+                  A = [1 2; 4 3; -1 0; 0 -1];
+                  [x,fmin] = linprog (f, A,b)
+                </code>
+              </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">Bisection method</h3>
+          <ul class="ms-5">
+            <li>
+              Find the root of the equation `x^3 - 2x - 5 = 0` lying between 2
+              and 3 correct to 3 places of decimals with error less than 0.001
+            </li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+f = @ (x) x^3-2*x-5;
+a = 2; b = 3; tol = 0.001;
+while abs(a-b) >= tol
+    x0 = (a+b)/2
+    if f(a)*f(x0)<0;
+        b= x0;
+    else
+        a = x0;
+    end
+    root = x0
+end
+                </code>
+              </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">Newton - Raphson Method</h3>
+          <ul class="ms-5">
+            <li>
+              Find a root `2x^2-3x-1 = 0` taking `x_0 = 1` with error less than
+              `10^-4`
+            </li>
+          </ul>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+f = @ (x) 2*x^2-3*x-1;
+Df = @(x) 4*x-3;
+x0=1; tol = 0.0001; diff=1;
+while diff>=tol
+    x1 = x0-f(x0)/Df(x0);
+    diff = abs(x1-x0);
+    x0=x1;
+end
+root = x0
+                </code>
+              </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

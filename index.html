@@ -62,6 +62,11 @@
                   >Permu & Combi</a
                 >
               </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#ssem"
+                  >2<sup>nd</sup> sem</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -69,6 +74,7 @@
     </header>
     <main>
       <h1 class="text-center my-5">Matlab - Ankit Adhikari</h1>
+      <h1 class="text-center my-5">1<sup>st</sup> semster</h1>
 
       <!-- set theory, real and complex numbers -->
       <section id="src" class="py-5 mb-5">
@@ -644,6 +650,50 @@
   str2 = [num2str(p/factorial(r)) ' Combinations'];
   disp(str2)
 </code>
+                </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h1 id="ssem" class="text-center my-5">2<sup>nd</sup> semester</h1>
+
+      <!-- 2D ploat -->
+      <section id="src" class="py-5 mb-5">
+        <h2 class="text-center my-2">1 - 2D Plot</h2>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Plot y = x<sup>2</sup> -5x + 6, where x&isin;[-5, 10]
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+x = [-5 : 10]; % creates vector x
+y = x.^2-5*x+6; % calculate y
+plot(x,y,'r')
+xlabel('x')
+ylabel('y')
+                </code>
+                </pre>
+              <button class="copy-button btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          <h3 class="my-5 ms-5">
+            Obtain graph of y = cos(x) from -&pi; to &pi;
+          </h3>
+          <div class="card mx-auto my-5">
+            <div class="card-body code-container">
+              <pre id="code">
+                <code>
+x = -pi : 0.01 : pi;
+y = cos(x);
+plot (x,y,'g')
+xlabel('value of x')
+ylabel('value of y')
+                </code>
                 </pre>
               <button class="copy-button btn btn-primary">Copy</button>
             </div>
